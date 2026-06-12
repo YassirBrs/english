@@ -33,7 +33,8 @@ body {
   line-height: 1.5;
 }
 
-body.language-modal-open {
+body.language-modal-open,
+body.submission-modal-open {
   overflow: hidden;
 }
 
@@ -290,6 +291,67 @@ button {
 .language-modal-options .language-option {
   width: 100%;
   min-height: 52px;
+}
+
+.submission-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  background: rgba(18, 16, 13, 0.68);
+  padding: clamp(18px, 5vw, 40px);
+  backdrop-filter: blur(14px);
+}
+
+.submission-modal[hidden] {
+  display: none;
+}
+
+.submission-modal-card {
+  display: grid;
+  width: min(100%, 500px);
+  gap: 18px;
+  border: 1px solid rgba(255, 250, 243, 0.5);
+  border-radius: var(--radius);
+  background: var(--surface);
+  padding: clamp(24px, 5vw, 42px);
+  box-shadow: 0 28px 90px rgba(0, 0, 0, 0.34);
+}
+
+.submission-icon {
+  display: grid;
+  width: 56px;
+  height: 56px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--ink);
+  color: var(--surface);
+}
+
+.submission-icon svg {
+  width: 28px;
+  height: 28px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2.4;
+}
+
+.submission-modal-card h2 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.8rem, 5vw, 2.7rem);
+  font-weight: 620;
+  line-height: 1.08;
+  letter-spacing: 0;
+}
+
+.submission-modal-card p {
+  max-width: 44ch;
+  margin-bottom: 0;
+  color: var(--ink-soft);
 }
 
 .eyebrow {
@@ -850,6 +912,7 @@ html[dir="rtl"] .hero-shade {
 html[dir="rtl"] h1,
 html[dir="rtl"] .section-heading h2,
 html[dir="rtl"] .language-modal-card h2,
+html[dir="rtl"] .submission-modal-card h2,
 html[dir="rtl"] .free-session-copy h2 {
   font-family:
     Tahoma, "Segoe UI", Arial, sans-serif;
@@ -1078,6 +1141,10 @@ html[dir="rtl"] .consent input {
   .language-modal-options {
     display: grid;
     grid-template-columns: 1fr;
+  }
+
+  .submission-modal-card .button {
+    width: 100%;
   }
 
   .hero-content {

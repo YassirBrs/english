@@ -35,6 +35,32 @@
       </div>
     </div>
 
+    <div
+      class="submission-modal"
+      id="submissionModal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="submission-modal-title"
+      aria-describedby="submission-modal-copy"
+      data-i18n-aria-label="success.modalAria"
+      hidden
+    >
+      <div class="submission-modal-card">
+        <div class="submission-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M20 6 9 17l-5-5"></path>
+          </svg>
+        </div>
+        <h2 id="submission-modal-title" data-i18n="success.title">Thank you. Bayan Academy will contact you soon.</h2>
+        <p id="submission-modal-copy" data-i18n="success.copy">
+          Your WhatsApp message has been prepared. Send it there, and our team will reply with the next step.
+        </p>
+        <button class="button submit-button" type="button" data-submission-modal-close>
+          <span data-i18n="success.action">Got it</span>
+        </button>
+      </div>
+    </div>
+
     <header class="site-header" data-i18n-aria-label="aria.mainNav">
       <a class="brand" href="#top" data-i18n-aria-label="aria.home">
         <span class="brand-mark" aria-hidden="true">BA</span>

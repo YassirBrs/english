@@ -17,6 +17,13 @@ const translations = {
       whatsapp: "WhatsApp: +212 697 965 070",
       whatsappAria: "Contact Bayan Academy on WhatsApp at +212 697 965 070",
     },
+    success: {
+      modalAria: "Submission confirmation",
+      title: "Thank you. Bayan Academy will contact you soon.",
+      copy:
+        "Your WhatsApp message has been prepared. Send it there, and our team will reply with the next step.",
+      action: "Got it",
+    },
     nav: {
       sessions: "Sessions",
       freeSession: "Trial session",
@@ -210,6 +217,13 @@ const translations = {
     footer: {
       whatsapp: "WhatsApp : +212 697 965 070",
       whatsappAria: "Contacter Bayan Academy sur WhatsApp au +212 697 965 070",
+    },
+    success: {
+      modalAria: "Confirmation d'envoi",
+      title: "Merci. Bayan Academy vous contactera bientôt.",
+      copy:
+        "Votre message WhatsApp est prêt. Envoyez-le, puis notre équipe vous répondra avec la prochaine étape.",
+      action: "J'ai compris",
     },
     nav: {
       sessions: "Sessions",
@@ -407,6 +421,13 @@ const translations = {
       whatsapp: "واتساب: +212 697 965 070",
       whatsappAria: "تواصل مع Bayan Academy عبر واتساب على الرقم +212 697 965 070",
     },
+    success: {
+      modalAria: "تأكيد الإرسال",
+      title: "شكرا لك. سيتواصل معك فريق Bayan Academy قريبا.",
+      copy:
+        "تم تجهيز رسالة واتساب الخاصة بك. أرسلها هناك، وسيرد عليك فريقنا بالخطوة التالية.",
+      action: "حسنا",
+    },
     nav: {
       sessions: "الحصص",
       freeSession: "حصة تجريبية",
@@ -594,6 +615,8 @@ const focusError = document.querySelector("#focusError");
 const formStatus = document.querySelector("#formStatus");
 const chooserStatus = document.querySelector("#chooserStatus");
 const languageModal = document.querySelector("#languageModal");
+const submissionModal = document.querySelector("#submissionModal");
+const submissionCloseButtons = document.querySelectorAll("[data-submission-modal-close]");
 const selectableControls = document.querySelectorAll(
   ".choice-card input, .choice-pill input"
 );
@@ -655,6 +678,26 @@ function hideLanguageModal() {
 
   languageModal.hidden = true;
   document.body.classList.remove("language-modal-open");
+}
+
+function showSubmissionModal() {
+  if (!submissionModal) {
+    return;
+  }
+
+  submissionModal.hidden = false;
+  document.body.classList.add("submission-modal-open");
+  submissionModal.querySelector("[data-submission-modal-close]")?.focus();
+}
+
+function hideSubmissionModal() {
+  if (!submissionModal) {
+    return;
+  }
+
+  submissionModal.hidden = true;
+  document.body.classList.remove("submission-modal-open");
+  form.querySelector('button[type="submit"]')?.focus();
 }
 
 function applyLanguage(language, options = {}) {
@@ -826,6 +869,22 @@ freeCheckTriggers.forEach((trigger) => {
   });
 });
 
+submissionCloseButtons.forEach((button) => {
+  button.addEventListener("click", hideSubmissionModal);
+});
+
+submissionModal?.addEventListener("click", (event) => {
+  if (event.target === submissionModal) {
+    hideSubmissionModal();
+  }
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && submissionModal && !submissionModal.hidden) {
+    hideSubmissionModal();
+  }
+});
+
 selectableControls.forEach((control) => {
   control.addEventListener("change", refreshChoiceStates);
 });
@@ -858,6 +917,7 @@ form.addEventListener("submit", (event) => {
 
   formStatus.textContent = t("validation.opening");
   window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+  showSubmissionModal();
 });
 
 applyLanguage(currentLanguage, {
