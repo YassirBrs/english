@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bayan Academy | Learn English with Confidence</title>
+    <meta
+      name="description"
+      content="Bayan Academy helps students improve English with a free trial session, a level check, and a clear learning direction before chatting on WhatsApp."
+    >
+    <link rel="preload" as="image" href="assets/english-lesson-hero.png">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main" data-i18n="skipLink">Skip to main content</a>
+
+    <div
+      class="language-modal"
+      id="languageModal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="language-modal-title"
+      data-i18n-aria-label="aria.languageModal"
+      hidden
+    >
+      <div class="language-modal-card">
+        <p class="modal-brand" data-i18n="brand.name">Bayan Academy</p>
+        <h2 id="language-modal-title" data-i18n="language.title">Choose your language</h2>
+        <p data-i18n="language.copy">Select the language you prefer, then the full website will open in that language.</p>
+        <div class="language-options language-modal-options" role="group" data-i18n-aria-label="aria.siteLanguage">
+          <button class="language-option" type="button" data-language="en" data-language-modal-choice>English</button>
+          <button class="language-option" type="button" data-language="fr" data-language-modal-choice>Français</button>
+          <button class="language-option" type="button" data-language="ar" data-language-modal-choice>العربية</button>
+        </div>
+      </div>
+    </div>
+
+    <header class="site-header" data-i18n-aria-label="aria.mainNav">
+      <a class="brand" href="#top" data-i18n-aria-label="aria.home">
+        <span class="brand-mark" aria-hidden="true">BA</span>
+        <span data-i18n="brand.name">Bayan Academy</span>
+      </a>
+
+      <div class="header-actions">
+        <div class="language-switcher compact-language" data-i18n-aria-label="aria.siteLanguage" role="group">
+          <button class="language-option" type="button" data-language="en" aria-label="English">EN</button>
+          <button class="language-option" type="button" data-language="fr" aria-label="Français">FR</button>
+          <button class="language-option" type="button" data-language="ar" aria-label="العربية">AR</button>
+        </div>
+
+        <nav class="nav-links" data-i18n-aria-label="aria.pageSections">
+          <a href="#programs" data-i18n="nav.sessions">Sessions</a>
+          <a href="#free-session" data-i18n="nav.freeSession">Trial session</a>
+          <a href="#questionnaire" data-i18n="nav.questionnaire">Questionnaire</a>
+          <a class="nav-cta" href="#questionnaire" data-i18n="nav.start">Start</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <img
+          class="hero-image"
+          src="assets/english-lesson-hero.png"
+          alt="Notebook and laptop prepared for an online English lesson"
+          data-i18n-alt="hero.imageAlt"
+          width="1792"
+          height="1024"
+        >
+        <div class="hero-shade" aria-hidden="true"></div>
+        <div class="hero-content">
+          <p class="eyebrow" data-i18n="hero.eyebrow">Your English journey starts here</p>
+          <h1 id="hero-title" data-i18n="hero.title">Speak English with clarity, comfort, and confidence.</h1>
+          <p data-i18n="hero.copy">
+            Bayan Academy helps you understand English, use it naturally, and feel ready for real conversations.
+            Start with a free trial session so your level is clear before your learning plan begins.
+          </p>
+          <a class="button primary-button" href="#questionnaire">
+            <span data-i18n="hero.cta">Start questionnaire</span>
+            <svg aria-hidden="true" viewBox="0 0 24 24">
+              <path d="M5 12h14M13 6l6 6-6 6"></path>
+            </svg>
+          </a>
+        </div>
+      </section>
+
+      <section class="programs-section" id="programs" aria-labelledby="programs-title">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="programs.eyebrow">Choose your learning style</p>
+          <h2 id="programs-title" data-i18n="programs.title">Pick the environment where you learn best.</h2>
+        </div>
+
+        <div class="program-grid" data-i18n-aria-label="aria.sessionOptions">
+          <article class="program-card">
+            <div class="program-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M8 19a4 4 0 0 1 8 0"></path>
+                <circle cx="12" cy="8" r="3"></circle>
+                <path d="M3 19a3.5 3.5 0 0 1 5.5-2.9"></path>
+                <path d="M15.5 16.1A3.5 3.5 0 0 1 21 19"></path>
+                <path d="M5.5 9a2.5 2.5 0 1 0 2 4"></path>
+                <path d="M18.5 9a2.5 2.5 0 1 1-2 4"></path>
+              </svg>
+            </div>
+            <h3 data-i18n="programs.group.title">Group Sessions</h3>
+            <p data-i18n="programs.group.copy">
+              Learn in an active space where you practise, ask questions,
+              and improve with other motivated students.
+            </p>
+          </article>
+
+          <article class="program-card featured-card">
+            <div class="program-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 3l2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 17.2 6.4 20.2 7.5 14 3 9.6l6.2-.9L12 3z"></path>
+              </svg>
+            </div>
+            <h3 data-i18n="programs.vip.title">VIP Specialized Sessions</h3>
+            <p data-i18n="programs.vip.copy">
+              Learn with personal attention, direct correction,
+              and lessons adapted to your current level.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="free-session-section" id="free-session" aria-labelledby="free-session-title">
+        <div class="free-session-inner">
+          <div class="free-session-copy">
+            <p class="eyebrow" data-i18n="freeSession.eyebrow">Trial session</p>
+            <h2 id="free-session-title" data-i18n="freeSession.title">Start with a free trial session.</h2>
+            <p data-i18n="freeSession.copy">
+              The first trial session is free. It helps us test your English level,
+              understand what you need, and guide you toward the right next step.
+            </p>
+            <a class="button light-button" href="#questionnaire" data-free-check-trigger>
+              <span data-i18n="freeSession.cta">Ask for the trial session</span>
+              <svg aria-hidden="true" viewBox="0 0 24 24">
+                <path d="M5 12h14M13 6l6 6-6 6"></path>
+              </svg>
+            </a>
+          </div>
+
+          <div class="free-session-points" aria-label="Trial session details" data-i18n-aria-label="aria.freeSessionDetails">
+            <div class="point-item">
+              <span aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M20 6 9 17l-5-5"></path>
+                </svg>
+              </span>
+              <p data-i18n="freeSession.points.level">Free trial session</p>
+            </div>
+            <div class="point-item">
+              <span aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M20 6 9 17l-5-5"></path>
+                </svg>
+              </span>
+              <p data-i18n="freeSession.points.recommendation">Student level check</p>
+            </div>
+            <div class="point-item">
+              <span aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M20 6 9 17l-5-5"></path>
+                </svg>
+              </span>
+              <p data-i18n="freeSession.points.nextStep">Personal recommendation</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="chooser-section" id="choose-path" aria-labelledby="choose-path-title">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="chooser.eyebrow">Choose your focus</p>
+          <h2 id="choose-path-title" data-i18n="chooser.title">What do you want to strengthen first?</h2>
+        </div>
+
+        <div class="chooser-grid" data-i18n-aria-label="aria.pathChooser">
+          <button class="chooser-card" type="button" data-preset="grammar">
+            <span class="chooser-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M5 4h14v16H5z"></path>
+                <path d="M8 8h8"></path>
+                <path d="M8 12h8"></path>
+                <path d="M8 16h5"></path>
+              </svg>
+            </span>
+            <span class="chooser-title" data-i18n="chooser.grammar.title">Grammar</span>
+            <span class="chooser-copy" data-i18n="chooser.grammar.copy">Choose this if you want clearer rules, better sentence structure, and fewer mistakes.</span>
+          </button>
+
+          <button class="chooser-card" type="button" data-preset="grammarVocabulary">
+            <span class="chooser-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M4 19.5V5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-1.5z"></path>
+                <path d="M8 7h6"></path>
+                <path d="M8 11h8"></path>
+                <path d="M8 15h5"></path>
+              </svg>
+            </span>
+            <span class="chooser-title" data-i18n="chooser.grammarVocabulary.title">Grammar + Vocabulary</span>
+            <span class="chooser-copy" data-i18n="chooser.grammarVocabulary.copy">Choose this if you want stronger grammar and more words to express yourself.</span>
+          </button>
+        </div>
+
+        <p class="chooser-status" id="chooserStatus" role="status" aria-live="polite"></p>
+      </section>
+
+      <section class="steps-section" aria-labelledby="steps-title">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="steps.eyebrow">Your first steps</p>
+          <h2 id="steps-title" data-i18n="steps.title">From confusion to a clearer English plan.</h2>
+        </div>
+
+        <div class="steps-grid">
+          <article class="step-item">
+            <span class="step-number">01</span>
+            <h3 data-i18n="steps.profile.title">Test your level</h3>
+            <p data-i18n="steps.profile.copy">The trial session shows what you already know and where you need support.</p>
+          </article>
+
+          <article class="step-item">
+            <span class="step-number">02</span>
+            <h3 data-i18n="steps.recommend.title">Find your focus</h3>
+            <p data-i18n="steps.recommend.copy">We decide whether grammar alone or grammar with vocabulary is the best start.</p>
+          </article>
+
+          <article class="step-item">
+            <span class="step-number">03</span>
+            <h3 data-i18n="steps.start.title">Begin with confidence</h3>
+            <p data-i18n="steps.start.copy">You begin with a clear direction and lessons that match your English level.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="questionnaire-section" id="questionnaire" aria-labelledby="questionnaire-title">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="form.eyebrow">Student profile</p>
+          <h2 id="questionnaire-title" data-i18n="form.title">Tell me what you want to improve.</h2>
+        </div>
+
+        <form class="intake-form" id="intakeForm" novalidate>
+          <fieldset>
+            <legend data-i18n="form.contact.legend">Contact information</legend>
+            <div class="field-grid">
+              <label class="field">
+                <span data-i18n="form.contact.fullName">Full name</span>
+                <input type="text" name="fullName" autocomplete="name" required>
+              </label>
+
+              <label class="field">
+                <span data-i18n="form.contact.phone">WhatsApp number</span>
+                <input type="tel" name="studentPhone" autocomplete="tel" required>
+              </label>
+
+              <label class="field">
+                <span data-i18n="form.contact.email">Email address</span>
+                <input type="email" name="email" autocomplete="email">
+              </label>
+
+              <label class="field">
+                <span data-i18n="form.contact.location">Country or city</span>
+                <input type="text" name="location" autocomplete="address-level2">
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend data-i18n="form.session.legend">Session type</legend>
+            <div class="choice-grid two-columns" role="radiogroup" data-i18n-aria-label="aria.sessionType">
+              <label class="choice-card">
+                <input type="radio" name="sessionType" value="group" required>
+                <span class="choice-title" data-i18n="form.session.groupTitle">Group sessions</span>
+                <span class="choice-copy" data-i18n="form.session.groupCopy">Learn in a shared space with guidance, practice, and support.</span>
+              </label>
+
+              <label class="choice-card">
+                <input type="radio" name="sessionType" value="vip" required>
+                <span class="choice-title" data-i18n="form.session.vipTitle">VIP specialized sessions</span>
+                <span class="choice-copy" data-i18n="form.session.vipCopy">Learn privately with direct correction and personal attention.</span>
+              </label>
+
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend data-i18n="form.freeCheck.legend">Trial session</legend>
+            <label class="choice-card free-check-card">
+              <input type="checkbox" name="freeLevelCheck" value="yes">
+              <span class="choice-title" data-i18n="form.freeCheck.title">I want the trial session first</span>
+              <span class="choice-copy" data-i18n="form.freeCheck.copy">The trial session is free and helps us check your level before you begin.</span>
+            </label>
+          </fieldset>
+
+          <fieldset>
+            <legend data-i18n="form.focus.legend">Learning focus</legend>
+            <div class="choice-grid two-columns" role="radiogroup" data-i18n-aria-label="aria.learningFocus">
+              <label class="choice-card">
+                <input type="radio" name="focus" value="grammar" required>
+                <span class="choice-title" data-i18n="focus.grammar">Grammar</span>
+              </label>
+              <label class="choice-card">
+                <input type="radio" name="focus" value="grammarVocabulary" required>
+                <span class="choice-title" data-i18n="focus.grammarVocabulary">Grammar + Vocabulary</span>
+              </label>
+            </div>
+            <p class="field-error" id="focusError" role="alert" aria-live="polite"></p>
+          </fieldset>
+
+          <div class="form-row">
+            <label class="field">
+              <span data-i18n="form.level.label">Current level</span>
+              <select name="level" required>
+                <option value="" data-i18n="form.level.placeholder">Select your level</option>
+                <option value="beginner" data-i18n="levels.beginner">Beginner</option>
+                <option value="elementary" data-i18n="levels.elementary">Elementary</option>
+                <option value="intermediate" data-i18n="levels.intermediate">Intermediate</option>
+                <option value="upperIntermediate" data-i18n="levels.upperIntermediate">Upper intermediate</option>
+                <option value="advanced" data-i18n="levels.advanced">Advanced</option>
+                <option value="notSure" data-i18n="levels.notSure">Not sure</option>
+              </select>
+            </label>
+
+            <label class="field">
+              <span data-i18n="form.availability.label">Preferred time</span>
+              <select name="availability" required>
+                <option value="" data-i18n="form.availability.placeholder">Select availability</option>
+                <option value="morning" data-i18n="availability.morning">Morning</option>
+                <option value="afternoon" data-i18n="availability.afternoon">Afternoon</option>
+                <option value="evening" data-i18n="availability.evening">Evening</option>
+                <option value="weekend" data-i18n="availability.weekend">Weekend</option>
+                <option value="flexible" data-i18n="availability.flexible">Flexible</option>
+              </select>
+            </label>
+          </div>
+
+          <label class="field">
+            <span data-i18n="form.goal.label">Main goal</span>
+            <textarea
+              name="goal"
+              rows="5"
+              required
+              placeholder="Example: I want to speak more confidently at work and improve my grammar."
+              data-i18n-placeholder="form.goal.placeholder"
+            ></textarea>
+          </label>
+
+          <label class="consent">
+            <input type="checkbox" name="consent" required>
+            <span data-i18n="form.consent">I agree to send this information on WhatsApp so we can discuss the best plan privately.</span>
+          </label>
+
+          <div class="form-footer">
+            <p data-i18n="form.noPrices">No public prices. Details are discussed after your learning profile is reviewed.</p>
+            <button class="button submit-button" type="submit">
+              <span data-i18n="form.submit">Send on WhatsApp</span>
+              <svg aria-hidden="true" viewBox="0 0 24 24">
+                <path d="M5 12h14M13 6l6 6-6 6"></path>
+              </svg>
+            </button>
+          </div>
+
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p data-i18n="brand.name">Bayan Academy</p>
+      <a href="#questionnaire" data-i18n="hero.cta">Start questionnaire</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
