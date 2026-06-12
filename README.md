@@ -9,7 +9,7 @@ Students can switch the website interface between English, French, and Arabic. T
 
 The page includes a trial-session section, a path chooser that preselects questionnaire options, and a simple how-it-works section to help students decide.
 
-After the questionnaire, the site prepares a WhatsApp message with their contact details, trial-session preference, preferred session type, learning focus, level, goals, and availability.
+After the questionnaire, the site prepares a WhatsApp message with only the essential details: name, WhatsApp number, preferred session type, learning focus, current level, and goal. The free trial session is included automatically.
 
 ## Configure WhatsApp
 

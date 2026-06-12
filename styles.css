@@ -696,8 +696,7 @@ legend {
   font-weight: 800;
 }
 
-.field-grid,
-.form-row {
+.field-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 16px;
@@ -1013,7 +1012,6 @@ html[dir="rtl"] .consent input {
   .chooser-grid,
   .steps-grid,
   .field-grid,
-  .form-row,
   .choice-grid,
   .choice-grid.two-columns {
     grid-template-columns: 1fr;

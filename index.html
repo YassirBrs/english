@@ -253,16 +253,6 @@
                 <span data-i18n="form.contact.phone">WhatsApp number</span>
                 <input type="tel" name="studentPhone" autocomplete="tel" required>
               </label>
-
-              <label class="field">
-                <span data-i18n="form.contact.email">Email address</span>
-                <input type="email" name="email" autocomplete="email">
-              </label>
-
-              <label class="field">
-                <span data-i18n="form.contact.location">Country or city</span>
-                <input type="text" name="location" autocomplete="address-level2">
-              </label>
             </div>
           </fieldset>
 
@@ -285,15 +275,6 @@
           </fieldset>
 
           <fieldset>
-            <legend data-i18n="form.freeCheck.legend">Trial session</legend>
-            <label class="choice-card free-check-card">
-              <input type="checkbox" name="freeLevelCheck" value="yes">
-              <span class="choice-title" data-i18n="form.freeCheck.title">I want the trial session first</span>
-              <span class="choice-copy" data-i18n="form.freeCheck.copy">The trial session is free and helps us check your level before you begin.</span>
-            </label>
-          </fieldset>
-
-          <fieldset>
             <legend data-i18n="form.focus.legend">Learning focus</legend>
             <div class="choice-grid two-columns" role="radiogroup" data-i18n-aria-label="aria.learningFocus">
               <label class="choice-card">
@@ -308,32 +289,18 @@
             <p class="field-error" id="focusError" role="alert" aria-live="polite"></p>
           </fieldset>
 
-          <div class="form-row">
-            <label class="field">
-              <span data-i18n="form.level.label">Current level</span>
-              <select name="level" required>
-                <option value="" data-i18n="form.level.placeholder">Select your level</option>
-                <option value="beginner" data-i18n="levels.beginner">Beginner</option>
-                <option value="elementary" data-i18n="levels.elementary">Elementary</option>
-                <option value="intermediate" data-i18n="levels.intermediate">Intermediate</option>
-                <option value="upperIntermediate" data-i18n="levels.upperIntermediate">Upper intermediate</option>
-                <option value="advanced" data-i18n="levels.advanced">Advanced</option>
-                <option value="notSure" data-i18n="levels.notSure">Not sure</option>
-              </select>
-            </label>
-
-            <label class="field">
-              <span data-i18n="form.availability.label">Preferred time</span>
-              <select name="availability" required>
-                <option value="" data-i18n="form.availability.placeholder">Select availability</option>
-                <option value="morning" data-i18n="availability.morning">Morning</option>
-                <option value="afternoon" data-i18n="availability.afternoon">Afternoon</option>
-                <option value="evening" data-i18n="availability.evening">Evening</option>
-                <option value="weekend" data-i18n="availability.weekend">Weekend</option>
-                <option value="flexible" data-i18n="availability.flexible">Flexible</option>
-              </select>
-            </label>
-          </div>
+          <label class="field">
+            <span data-i18n="form.level.label">Current level</span>
+            <select name="level" required>
+              <option value="" data-i18n="form.level.placeholder">Select your level</option>
+              <option value="beginner" data-i18n="levels.beginner">Beginner</option>
+              <option value="elementary" data-i18n="levels.elementary">Elementary</option>
+              <option value="intermediate" data-i18n="levels.intermediate">Intermediate</option>
+              <option value="upperIntermediate" data-i18n="levels.upperIntermediate">Upper intermediate</option>
+              <option value="advanced" data-i18n="levels.advanced">Advanced</option>
+              <option value="notSure" data-i18n="levels.notSure">Not sure</option>
+            </select>
+          </label>
 
           <label class="field">
             <span data-i18n="form.goal.label">Main goal</span>

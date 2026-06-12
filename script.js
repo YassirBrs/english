@@ -116,8 +116,6 @@ const translations = {
         legend: "Contact information",
         fullName: "Full name",
         phone: "WhatsApp number",
-        email: "Email address",
-        location: "Country or city",
       },
       session: {
         legend: "Session type",
@@ -127,22 +125,12 @@ const translations = {
         vipTitle: "VIP specialized sessions",
         vipCopy: "Learn privately with direct correction and personal attention.",
       },
-      freeCheck: {
-        legend: "Trial session",
-        title: "I want the trial session first",
-        copy:
-          "The trial session is free and helps us test your level before you begin.",
-      },
       focus: {
         legend: "Learning focus",
       },
       level: {
         label: "Current level",
         placeholder: "Select your level",
-      },
-      availability: {
-        label: "Preferred time",
-        placeholder: "Select availability",
       },
       goal: {
         label: "Main goal",
@@ -176,13 +164,6 @@ const translations = {
       advanced: "Advanced",
       notSure: "Not sure",
     },
-    availability: {
-      morning: "Morning",
-      afternoon: "Afternoon",
-      evening: "Evening",
-      weekend: "Weekend",
-      flexible: "Flexible",
-    },
     validation: {
       focusRequired: "Choose one learning focus.",
       whatsappMissing:
@@ -190,8 +171,8 @@ const translations = {
       opening: "Opening WhatsApp with your learning profile.",
       presetApplied:
         "I selected that focus in the questionnaire. You can adjust it below.",
-      freeCheckApplied:
-        "The trial session is selected in the questionnaire.",
+      trialIncluded:
+        "The free trial session is included in your message.",
     },
     message: {
       intro: "Salam, I would like to reserve a place at Bayan Academy.",
@@ -208,10 +189,7 @@ const translations = {
       learningFocus: "🎯 Learning focus",
       name: "👤 Name",
       phone: "📞 WhatsApp",
-      email: "📧 Email",
-      location: "📍 Country / city",
       currentLevel: "⭐ Current level",
-      preferredTime: "🕒 Preferred time",
       mainGoal: "📝 Useful details",
       websiteLanguage: "🌐 Website language",
       yes: "Yes",
@@ -333,8 +311,6 @@ const translations = {
         legend: "Informations de contact",
         fullName: "Nom complet",
         phone: "Numéro WhatsApp",
-        email: "Adresse e-mail",
-        location: "Pays ou ville",
       },
       session: {
         legend: "Type de session",
@@ -345,22 +321,12 @@ const translations = {
         vipCopy:
           "Apprenez en privé avec des corrections directes et une attention personnelle.",
       },
-      freeCheck: {
-        legend: "Session d'essai",
-        title: "Je veux d'abord la session d'essai",
-        copy:
-          "La session d'essai est gratuite et permet de tester votre niveau avant de commencer.",
-      },
       focus: {
         legend: "Objectif d'apprentissage",
       },
       level: {
         label: "Niveau actuel",
         placeholder: "Sélectionnez votre niveau",
-      },
-      availability: {
-        label: "Moment préféré",
-        placeholder: "Sélectionnez votre disponibilité",
       },
       goal: {
         label: "Objectif principal",
@@ -394,13 +360,6 @@ const translations = {
       advanced: "Avancé",
       notSure: "Je ne sais pas",
     },
-    availability: {
-      morning: "Matin",
-      afternoon: "Après-midi",
-      evening: "Soir",
-      weekend: "Week-end",
-      flexible: "Flexible",
-    },
     validation: {
       focusRequired: "Choisissez un objectif d'apprentissage.",
       whatsappMissing:
@@ -408,7 +367,8 @@ const translations = {
       opening: "Ouverture de WhatsApp avec votre profil.",
       presetApplied:
         "J'ai sélectionné cet objectif dans le questionnaire. Vous pouvez l'ajuster ci-dessous.",
-      freeCheckApplied: "La session d'essai est sélectionnée dans le questionnaire.",
+      trialIncluded:
+        "La session d'essai gratuite est incluse dans votre message.",
     },
     message: {
       intro: "Salam, je souhaite réserver une place chez Bayan Academy.",
@@ -425,10 +385,7 @@ const translations = {
       learningFocus: "🎯 Objectif d'apprentissage",
       name: "👤 Nom",
       phone: "📞 WhatsApp",
-      email: "📧 Contact",
-      location: "📍 Pays / ville",
       currentLevel: "⭐ Niveau actuel",
-      preferredTime: "🕒 Moment préféré",
       mainGoal: "📝 Détails utiles",
       websiteLanguage: "🌐 Langue du site",
       yes: "Oui",
@@ -544,8 +501,6 @@ const translations = {
         legend: "معلومات التواصل",
         fullName: "الاسم الكامل",
         phone: "رقم واتساب",
-        email: "البريد الإلكتروني",
-        location: "البلد أو المدينة",
       },
       session: {
         legend: "نوع الحصة",
@@ -554,22 +509,12 @@ const translations = {
         vipTitle: "حصص VIP متخصصة",
         vipCopy: "تعلم بشكل خاص مع تصحيح مباشر واهتمام شخصي.",
       },
-      freeCheck: {
-        legend: "حصة تجريبية",
-        title: "أريد الحصة التجريبية أولا",
-        copy:
-          "الحصة التجريبية مجانية وتساعدنا على اختبار مستواك قبل البداية.",
-      },
       focus: {
         legend: "هدف التعلم",
       },
       level: {
         label: "المستوى الحالي",
         placeholder: "اختر مستواك",
-      },
-      availability: {
-        label: "الوقت المفضل",
-        placeholder: "اختر وقتك المناسب",
       },
       goal: {
         label: "الهدف الرئيسي",
@@ -603,13 +548,6 @@ const translations = {
       advanced: "متقدم",
       notSure: "لست متأكدا",
     },
-    availability: {
-      morning: "الصباح",
-      afternoon: "بعد الظهر",
-      evening: "المساء",
-      weekend: "نهاية الأسبوع",
-      flexible: "مرن",
-    },
     validation: {
       focusRequired: "اختر هدف تعلم واحدا.",
       whatsappMissing:
@@ -617,7 +555,7 @@ const translations = {
       opening: "يتم فتح واتساب مع ملفك التعليمي.",
       presetApplied:
         "تم اختيار هذا التركيز في الاستمارة. يمكنك تعديله بالأسفل.",
-      freeCheckApplied: "تم اختيار الحصة التجريبية في الاستمارة.",
+      trialIncluded: "تم تضمين الحصة التجريبية المجانية في رسالتك.",
     },
     message: {
       intro: "سلام، أريد حجز مكان في Bayan Academy.",
@@ -634,10 +572,7 @@ const translations = {
       learningFocus: "🎯 هدف التعلم",
       name: "👤 الاسم",
       phone: "📞 واتساب",
-      email: "📧 البريد الإلكتروني",
-      location: "📍 البلد / المدينة",
       currentLevel: "⭐ المستوى الحالي",
-      preferredTime: "🕒 الوقت المفضل",
       mainGoal: "📝 تفاصيل مفيدة",
       websiteLanguage: "🌐 لغة الموقع",
       yes: "نعم",
@@ -652,7 +587,6 @@ const valueGroups = {
   sessionType: "sessionTypes",
   focus: "focus",
   level: "levels",
-  availability: "availability",
 };
 
 const form = document.querySelector("#intakeForm");
@@ -805,13 +739,6 @@ function setRadioValue(name, value) {
   }
 }
 
-function setCheckboxValue(name, value, checked) {
-  const control = form.querySelector(`input[name="${name}"][value="${value}"]`);
-  if (control) {
-    control.checked = checked;
-  }
-}
-
 function setFocusValues(values) {
   form.querySelectorAll('input[name="focus"]').forEach((control) => {
     control.checked = values.includes(control.value);
@@ -841,9 +768,7 @@ function applyPreset(presetName) {
 }
 
 function applyFreeCheck() {
-  setCheckboxValue("freeLevelCheck", "yes", true);
-  refreshChoiceStates();
-  chooserStatus.textContent = t("validation.freeCheckApplied");
+  chooserStatus.textContent = t("validation.trialIncluded");
   scrollToQuestionnaire();
 }
 
@@ -851,7 +776,6 @@ function buildMessage(formData) {
   const focusAreas = getCheckedValues("focus")
     .map((value) => getValueLabel("focus", value))
     .join(", ");
-  const wantsFreeCheck = formData.get("freeLevelCheck") === "yes";
   const sessionType = getValueLabel(
     "sessionType",
     getFormValue(formData, "sessionType")
@@ -865,15 +789,12 @@ function buildMessage(formData) {
     `${t("message.sessionsPerWeek")}: ${t("message.sessionsPerWeekValue")}`,
     `${t("message.duration")}: ${t("message.durationValue")}`,
     `${t("message.format")}: ${sessionType}`,
-    `${t("message.trialSession")}: ${wantsFreeCheck ? t("message.yes") : t("message.no")}`,
+    `${t("message.trialSession")}: ${t("message.yes")}`,
     `${t("message.learningFocus")}: ${focusAreas}`,
     "",
     `${t("message.name")}: ${getFormValue(formData, "fullName")}`,
     `${t("message.phone")}: ${getFormValue(formData, "studentPhone")}`,
-    `${t("message.email")}: ${getFormValue(formData, "email")}`,
-    `${t("message.location")}: ${getFormValue(formData, "location")}`,
     `${t("message.currentLevel")}: ${getValueLabel("level", getFormValue(formData, "level"))}`,
-    `${t("message.preferredTime")}: ${getValueLabel("availability", getFormValue(formData, "availability"))}`,
     `${t("message.mainGoal")}: ${getFormValue(formData, "goal")}`,
     `${t("message.websiteLanguage")}: ${getValueLabel("websiteLanguage", currentLanguage)}`,
   ].join("\n");
