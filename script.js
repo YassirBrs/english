@@ -17,6 +17,20 @@ const translations = {
       whatsapp: "WhatsApp: +212 697 965 070",
       whatsappAria: "Contact Bayan Academy on WhatsApp at +212 697 965 070",
     },
+    whatsappWidget: {
+      aria: "WhatsApp contact panel",
+      toggleAria: "Open WhatsApp contact panel",
+      closeAria: "Close WhatsApp contact panel",
+      eyebrow: "WhatsApp support",
+      title: "Need help choosing?",
+      copy:
+        "Chat with Bayan Academy and we will guide you toward the right English session.",
+      chat: "Chat on WhatsApp",
+      form: "Fill the quick form",
+      button: "WhatsApp",
+      message:
+        "Salam, I would like more information about English sessions at Bayan Academy.",
+    },
     success: {
       modalAria: "Submission confirmation",
       title: "Thank you. Bayan Academy will contact you soon.",
@@ -217,6 +231,20 @@ const translations = {
     footer: {
       whatsapp: "WhatsApp : +212 697 965 070",
       whatsappAria: "Contacter Bayan Academy sur WhatsApp au +212 697 965 070",
+    },
+    whatsappWidget: {
+      aria: "Panneau de contact WhatsApp",
+      toggleAria: "Ouvrir le panneau de contact WhatsApp",
+      closeAria: "Fermer le panneau de contact WhatsApp",
+      eyebrow: "Support WhatsApp",
+      title: "Besoin d'aide pour choisir ?",
+      copy:
+        "Discutez avec Bayan Academy et nous vous guiderons vers la bonne session d'anglais.",
+      chat: "Discuter sur WhatsApp",
+      form: "Remplir le formulaire rapide",
+      button: "WhatsApp",
+      message:
+        "Salam, je souhaite avoir plus d'informations sur les sessions d'anglais chez Bayan Academy.",
     },
     success: {
       modalAria: "Confirmation d'envoi",
@@ -421,6 +449,20 @@ const translations = {
       whatsapp: "واتساب: +212 697 965 070",
       whatsappAria: "تواصل مع Bayan Academy عبر واتساب على الرقم +212 697 965 070",
     },
+    whatsappWidget: {
+      aria: "لوحة التواصل عبر واتساب",
+      toggleAria: "افتح لوحة التواصل عبر واتساب",
+      closeAria: "أغلق لوحة التواصل عبر واتساب",
+      eyebrow: "دعم واتساب",
+      title: "تحتاج مساعدة في الاختيار؟",
+      copy:
+        "تواصل مع Bayan Academy وسنساعدك على اختيار حصة الإنجليزية المناسبة.",
+      chat: "تواصل عبر واتساب",
+      form: "املأ الاستمارة السريعة",
+      button: "واتساب",
+      message:
+        "سلام، أريد معلومات أكثر حول حصص الإنجليزية في Bayan Academy.",
+    },
     success: {
       modalAria: "تأكيد الإرسال",
       title: "شكرا لك. سيتواصل معك فريق Bayan Academy قريبا.",
@@ -617,6 +659,12 @@ const chooserStatus = document.querySelector("#chooserStatus");
 const languageModal = document.querySelector("#languageModal");
 const submissionModal = document.querySelector("#submissionModal");
 const submissionCloseButtons = document.querySelectorAll("[data-submission-modal-close]");
+const whatsappWidget = document.querySelector("#whatsappWidget");
+const whatsappPanel = document.querySelector("#whatsappPanel");
+const whatsappToggle = document.querySelector("[data-whatsapp-toggle]");
+const whatsappCloseButtons = document.querySelectorAll("[data-whatsapp-close]");
+const whatsappDirectLinks = document.querySelectorAll("[data-whatsapp-direct]");
+const whatsappFormLinks = document.querySelectorAll("[data-whatsapp-form-link]");
 const selectableControls = document.querySelectorAll(
   ".choice-card input, .choice-pill input"
 );
@@ -700,6 +748,53 @@ function hideSubmissionModal() {
   form.querySelector('button[type="submit"]')?.focus();
 }
 
+function buildWhatsappUrl(message) {
+  const text = message ? `?text=${encodeURIComponent(message)}` : "";
+  return `https://wa.me/${WHATSAPP_NUMBER}${text}`;
+}
+
+function updateWhatsAppWidgetLinks() {
+  whatsappDirectLinks.forEach((link) => {
+    link.setAttribute("href", buildWhatsappUrl(t("whatsappWidget.message")));
+  });
+}
+
+function openWhatsAppPanel() {
+  if (!whatsappPanel || !whatsappToggle) {
+    return;
+  }
+
+  whatsappPanel.hidden = false;
+  whatsappToggle.setAttribute("aria-expanded", "true");
+  whatsappPanel.querySelector("[data-whatsapp-direct]")?.focus();
+}
+
+function closeWhatsAppPanel(options = {}) {
+  const { restoreFocus = true } = options;
+  if (!whatsappPanel || !whatsappToggle) {
+    return;
+  }
+
+  whatsappPanel.hidden = true;
+  whatsappToggle.setAttribute("aria-expanded", "false");
+
+  if (restoreFocus) {
+    whatsappToggle.focus();
+  }
+}
+
+function toggleWhatsAppPanel() {
+  if (!whatsappPanel) {
+    return;
+  }
+
+  if (whatsappPanel.hidden) {
+    openWhatsAppPanel();
+  } else {
+    closeWhatsAppPanel();
+  }
+}
+
 function applyLanguage(language, options = {}) {
   const { persist = true, closeModal = true } = options;
   currentLanguage = SUPPORTED_LANGUAGES.includes(language) ? language : "en";
@@ -743,6 +838,7 @@ function applyLanguage(language, options = {}) {
   focusError.textContent = "";
   formStatus.textContent = "";
   chooserStatus.textContent = "";
+  updateWhatsAppWidgetLinks();
 
   if (persist) {
     saveLanguage(currentLanguage);
@@ -869,6 +965,29 @@ freeCheckTriggers.forEach((trigger) => {
   });
 });
 
+whatsappToggle?.addEventListener("click", toggleWhatsAppPanel);
+
+whatsappCloseButtons.forEach((button) => {
+  button.addEventListener("click", closeWhatsAppPanel);
+});
+
+whatsappFormLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    closeWhatsAppPanel({ restoreFocus: false });
+  });
+});
+
+document.addEventListener("click", (event) => {
+  if (
+    whatsappWidget &&
+    whatsappPanel &&
+    !whatsappPanel.hidden &&
+    !whatsappWidget.contains(event.target)
+  ) {
+    closeWhatsAppPanel({ restoreFocus: false });
+  }
+});
+
 submissionCloseButtons.forEach((button) => {
   button.addEventListener("click", hideSubmissionModal);
 });
@@ -882,6 +1001,8 @@ submissionModal?.addEventListener("click", (event) => {
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape" && submissionModal && !submissionModal.hidden) {
     hideSubmissionModal();
+  } else if (event.key === "Escape" && whatsappPanel && !whatsappPanel.hidden) {
+    closeWhatsAppPanel();
   }
 });
 

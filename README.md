@@ -11,6 +11,8 @@ The page includes a trial-session section, a path chooser that preselects questi
 
 After the questionnaire, the site prepares a WhatsApp message with only the essential details: name, WhatsApp number, preferred session type, learning focus, current level, and goal. The free trial session is included automatically.
 
+The site also includes a floating WhatsApp popup so students can contact Bayan Academy directly from any section.
+
 ## Configure WhatsApp
 
 The site is currently configured to send questionnaire messages to:

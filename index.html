@@ -374,6 +374,66 @@
       </div>
     </footer>
 
+    <div class="whatsapp-widget" id="whatsappWidget">
+      <div
+        class="whatsapp-panel"
+        id="whatsappPanel"
+        role="dialog"
+        aria-labelledby="whatsapp-panel-title"
+        data-i18n-aria-label="whatsappWidget.aria"
+        hidden
+      >
+        <button
+          class="whatsapp-close"
+          type="button"
+          data-whatsapp-close
+          data-i18n-aria-label="whatsappWidget.closeAria"
+        >
+          <svg aria-hidden="true" viewBox="0 0 24 24">
+            <path d="M18 6 6 18"></path>
+            <path d="m6 6 12 12"></path>
+          </svg>
+        </button>
+        <p class="eyebrow" data-i18n="whatsappWidget.eyebrow">WhatsApp support</p>
+        <h2 id="whatsapp-panel-title" data-i18n="whatsappWidget.title">Need help choosing?</h2>
+        <p data-i18n="whatsappWidget.copy">
+          Chat with Bayan Academy and we will guide you toward the right English session.
+        </p>
+        <div class="whatsapp-actions">
+          <a
+            class="whatsapp-primary"
+            href="https://wa.me/212697965070"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-whatsapp-direct
+          >
+            <span data-i18n="whatsappWidget.chat">Chat on WhatsApp</span>
+            <svg aria-hidden="true" viewBox="0 0 24 24">
+              <path d="M5 12h14M13 6l6 6-6 6"></path>
+            </svg>
+          </a>
+          <a class="whatsapp-secondary" href="#questionnaire" data-whatsapp-form-link>
+            <span data-i18n="whatsappWidget.form">Fill the quick form</span>
+          </a>
+        </div>
+      </div>
+
+      <button
+        class="whatsapp-fab"
+        type="button"
+        aria-controls="whatsappPanel"
+        aria-expanded="false"
+        data-whatsapp-toggle
+        data-i18n-aria-label="whatsappWidget.toggleAria"
+      >
+        <svg aria-hidden="true" viewBox="0 0 24 24">
+          <path d="M20 11.5a7.5 7.5 0 0 1-11.2 6.5L4 19.5l1.5-4.4A7.5 7.5 0 1 1 20 11.5z"></path>
+          <path d="M9 10.2c.4 1.9 1.8 3.3 3.7 3.8l1.1-1.1 2.1 1.1c-.3 1-1.2 1.7-2.3 1.7-3.2 0-6.1-2.9-6.1-6.1 0-1.1.7-2 1.7-2.3l1.1 2.1-1.3.8z"></path>
+        </svg>
+        <span data-i18n="whatsappWidget.button">WhatsApp</span>
+      </button>
+    </div>
+
     <script src="script.js"></script>
   </body>
 </html>
