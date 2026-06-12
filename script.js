@@ -13,6 +13,10 @@ const translations = {
     brand: {
       name: "Bayan Academy",
     },
+    footer: {
+      whatsapp: "WhatsApp: +212 697 965 070",
+      whatsappAria: "Contact Bayan Academy on WhatsApp at +212 697 965 070",
+    },
     nav: {
       sessions: "Sessions",
       freeSession: "Trial session",
@@ -216,6 +220,10 @@ const translations = {
     skipLink: "Aller au contenu principal",
     brand: {
       name: "Bayan Academy",
+    },
+    footer: {
+      whatsapp: "WhatsApp : +212 697 965 070",
+      whatsappAria: "Contacter Bayan Academy sur WhatsApp au +212 697 965 070",
     },
     nav: {
       sessions: "Sessions",
@@ -421,6 +429,10 @@ const translations = {
     skipLink: "انتقل إلى المحتوى الرئيسي",
     brand: {
       name: "Bayan Academy",
+    },
+    footer: {
+      whatsapp: "واتساب: +212 697 965 070",
+      whatsappAria: "تواصل مع Bayan Academy عبر واتساب على الرقم +212 697 965 070",
     },
     nav: {
       sessions: "الحصص",
